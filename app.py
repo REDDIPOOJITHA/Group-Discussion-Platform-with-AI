@@ -8,7 +8,7 @@
 # app.secret_key = "bkheifogihgregbeboeiebnvoegijroekegiehgorjgoergh"
 
 # # Configure Gemini API
-# genai.configure(api_key="AIzaSyBTPDERl1g44ydd18rMj525Bfc3JJGyHbM")  # Replace with your Gemini API key
+# genai.configure(api_key="ENTER YOUR API KEY HERE")  # Replace with your Gemini API key
 
 # # List of random names for bots
 # BOT_NAMES = [
