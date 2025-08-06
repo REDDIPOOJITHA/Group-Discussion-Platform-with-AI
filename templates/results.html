@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Group Discussion Results</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #001f3f;
+      font-family: Arial, sans-serif;
+      color: white;
+      overflow: hidden;
+    }
+
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      width: 98%; /* Wider page */
+      max-width: 2400px; /* Increased max width */
+    }
+
+    h1 {
+      color: #00ffcc;
+      font-size: 120px;
+      margin-bottom: 30px;
+    }
+
+    .caution {
+      color: red;
+      font-weight: bold;
+      font-size: 48px;
+      margin-bottom: 40px;
+    }
+
+    .result-box {
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 80px 120px;
+      border-radius: 40px;
+      box-shadow: 0 0 40px #00ffcc;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 64px;
+      margin-bottom: 60px;
+    }
+
+    th, td {
+      border: 4px solid white;
+      padding: 40px 60px;
+      color: white;
+    }
+    th:nth-child(2), td:nth-child(2) {
+  width: 740px; 
+    }
+
+    th {
+      background-color: #003366;
+      font-weight: bold;
+    }
+
+    .pro-tip {
+      font-size: 48px;
+      color: #00ffcc;
+    }
+
+    .pro-tip::before {
+      content: "⭐ ";
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>GD COMPLETED SUCCESSFULLY!</h1>
+
+    {% if caution %}
+      <div class="caution">⚠️ {{ caution }}</div>
+    {% endif %}
+
+    <div class="result-box">
+      <table>
+        <tr>
+          <th>Participant</th>
+          <th>Score (out of 10)</th>
+          <th>Suggestions</th>
+        </tr>
+        {% for i in range(users|length) %}
+        <tr>
+          <td>{{ users[i] }}</td>
+          <td>{{ scores[i] }}</td>
+          <td>{{ feedback[i] }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+
+      <div class="pro-tip">
+        Pro Tip: Speak clearly, stay on topic, and support your points with examples to improve your GD score!
+      </div>
+    </div>
+  </div>
+</body>
+</html>
