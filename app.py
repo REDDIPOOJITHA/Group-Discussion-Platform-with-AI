@@ -5,7 +5,7 @@
 # import random
 
 # app = Flask(__name__)
-# app.secret_key = "bkheifogihgregbeboeiebnvoegijroekegiehgorjgoergh"
+# app.secret_key = "Enter your Secret key here" # secret key can be anything 
 
 # # Configure Gemini API
 # genai.configure(api_key="ENTER YOUR API KEY HERE")  # Replace with your Gemini API key
